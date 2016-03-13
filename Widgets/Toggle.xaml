@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="Widgets.Toggle"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Widgets"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ToggleButton 
+            Click="toggle"
+            x:Name="toggleButton" 
+            Content="Wifi" 
+            HorizontalAlignment="Left" 
+            Margin="131,185,0,0" 
+            VerticalAlignment="Top"/>
+        <TextBlock 
+            x:Name="textBlock" 
+            HorizontalAlignment="Left" 
+            Margin="51,57,0,0" 
+            TextWrapping="Wrap"
+            FontSize="25"
+            Text="Press Toggle Button" 
+            VerticalAlignment="Top"/>
+        <Button 
+            Click="back_pressed"
+            x:Name="button" Content="Back" HorizontalAlignment="Left" Margin="137,530,0,0" VerticalAlignment="Top"/>
+        <Image 
+            x:Name="on" 
+            HorizontalAlignment="Left" 
+            Height="121" 
+            Margin="51,323,0,0" 
+            VerticalAlignment="Top"
+            Visibility="Collapsed"
+            Source="/Assets/onWifi.png"
+            Width="121"/>
+        <Image 
+            x:Name="off" 
+            HorizontalAlignment="Left" 
+            Height="121" 
+            Margin="239,323,0,0" 
+            Source="/Assets/offWifi.png"
+            Visibility="Visible"
+            VerticalAlignment="Top" 
+            Width="112"/>
+
+    </Grid>
+</Page>
