@@ -22,6 +22,8 @@ namespace Widgets
     /// </summary>
     public sealed partial class ToggleButtonsImage : Page
     {
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = DateTime.Now;
         public ToggleButtonsImage()
         {
             this.InitializeComponent();
@@ -43,7 +45,7 @@ namespace Widgets
 
         private void t100_click(object sender, RoutedEventArgs e)
         {
-            if(t100.IsChecked == true)
+            if (t100.IsChecked == true)
             {
                 image.Width = 250;
                 image.Height = 250;
@@ -51,11 +53,17 @@ namespace Widgets
                 t75.IsChecked = false;
                 t50.IsChecked = false;
                 t25.IsChecked = false;
-            }            
+            }
+            endTime = DateTime.Now;
+            TimeSpan ts = endTime - startTime;
+            startTime = DateTime.Now;
+            time.Text = ts.TotalMilliseconds.ToString() + " ms";
         }
 
         private void t75_click(object sender, RoutedEventArgs e)
         {
+            
+
             if (t75.IsChecked == true)
             {
                 image.Width = 200;
@@ -65,6 +73,10 @@ namespace Widgets
                 t50.IsChecked = false;
                 t25.IsChecked = false;
             }
+            endTime = DateTime.Now;
+            TimeSpan ts = endTime - startTime;
+            startTime = DateTime.Now;
+            time.Text = ts.TotalMilliseconds.ToString() + " ms";
         }
 
         private void t50_click(object sender, RoutedEventArgs e)
@@ -78,6 +90,10 @@ namespace Widgets
                 t100.IsChecked = false;
                 t25.IsChecked = false;
             }
+            endTime = DateTime.Now;
+            TimeSpan ts = endTime - startTime;
+            startTime = DateTime.Now;
+            time.Text = ts.TotalMilliseconds.ToString() + " ms";
         }
 
         private void t25_click(object sender, RoutedEventArgs e)
@@ -91,6 +107,15 @@ namespace Widgets
                 t50.IsChecked = false;
                 t100.IsChecked = false;
             }
+            endTime = DateTime.Now;
+            TimeSpan ts = endTime - startTime;
+            startTime = DateTime.Now;
+            time.Text = ts.TotalMilliseconds.ToString() + " ms";
+        }
+
+        private void start_time(object sender, RoutedEventArgs e)
+        {
+            startTime = DateTime.Now;            
         }
     }
 }

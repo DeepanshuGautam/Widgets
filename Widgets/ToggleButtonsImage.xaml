@@ -50,17 +50,34 @@
             x:Name="backButton" 
             Click="back_pressed"
             Content="Back" 
+            Loaded="start_time"
             HorizontalAlignment="Left" 
             Margin="162,545,0,0" 
             VerticalAlignment="Top"/>
         <Image 
             x:Name="image" 
-            HorizontalAlignment="Left" 
-            Height="100" 
-            Margin="42,318,0,0" 
-            VerticalAlignment="Top"
+            HorizontalAlignment="Center"             
+            Height="250" 
+            Margin="85,260,65,125" 
+            VerticalAlignment="Center"
             Source="/Assets/anita.jpg"
-            Width="100"/>
+            Width="250"/>
+        <TextBlock 
+            x:Name="textBlock1" 
+            HorizontalAlignment="Left" 
+            Margin="56,515,0,0" 
+            TextWrapping="Wrap" 
+            Text="Response Time:" 
+            FontSize="20"
+            VerticalAlignment="Top"/>
+        <TextBlock 
+            x:Name="time" 
+            HorizontalAlignment="Left" 
+            Margin="226,515,0,0" 
+            TextWrapping="Wrap" 
+            Text="0s" 
+            FontSize="20"
+            VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
